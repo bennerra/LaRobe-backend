@@ -9,4 +9,5 @@ urlpatterns = [
     path("signup/", views.RegistrationViewSet.as_view({"post": "create"})),
     path("signin/", obtain_auth_token),
     path("profile/", views.ProfileViewSet.as_view({"get": "retrieve"})),
+    path("users/<pk>/profile", views.ProfileViewSet.as_view({"get": "retrieve"})),
 ]

@@ -11,4 +11,4 @@ class SeniorAdminOnly(permissions.BasePermission):
 
 class NotBlocked(permissions.BasePermission):
     def has_permission(self, request, view):
-        return request.user.is_authenticated and request.user.role != "blocked"
+        return not request.user.is_authenticated or request.user.role != "blocked"

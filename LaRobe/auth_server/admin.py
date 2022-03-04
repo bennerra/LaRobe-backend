@@ -113,6 +113,10 @@ class CustomUserAdmin(BaseUserAdmin, ModelAdmin):
         """Проверяет, есть ли доступ к модулю"""
         if request.user.is_superuser:
             return True
+
+        if request.user.is_anonymous:
+            return False
+
         return request.user.role in [User.Role.JUNIOR_ADMIN, User.Role.SENIOR_ADMIN]
 
     def has_change_permission(self, request, obj = ...):

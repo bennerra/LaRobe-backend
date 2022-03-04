@@ -39,5 +39,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = (
             "avatar",
             "banner_image",
-            "about_me"
+            "about_me",
+            "nickname",
+            "id"
         )
