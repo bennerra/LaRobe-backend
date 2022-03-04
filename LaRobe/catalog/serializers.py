@@ -68,8 +68,9 @@ class ReviewSerializer(serializers.ModelSerializer):
             "rating",
             "user_id",
             "author",
-            "product"
+            "product",
         )
+
 
 class ReviewCreateSerializer(serializers.ModelSerializer):
     rating = serializers.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
