@@ -1,6 +1,6 @@
 from rest_framework import viewsets, status
 from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticated, AllowAny, NOT
 from rest_framework.response import Response
 
 from auth_server.serializers import UserSerializer, ProfileSerializer
@@ -9,7 +9,7 @@ from auth_server.serializers import UserSerializer, ProfileSerializer
 class RegistrationViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     PERMISSION_CLASSES = (
-        AllowAny
+        AllowAny,
     )
     basename = "user"
 
