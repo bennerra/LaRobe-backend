@@ -21,7 +21,6 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
     phone = models.IntegerField()
     sex = models.CharField(max_length=10, choices=(('male', 'male'), ('female', 'female')))
-    date_of_birth = models.DateField()
     avatar = models.ImageField(upload_to='avatars/%Y/%m')
     banner_image = models.ImageField(upload_to='banners/%Y/%m')
     about_me = models.TextField(blank=True)

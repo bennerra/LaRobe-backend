@@ -137,8 +137,10 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 UNFOLD = {
-    # Последний пункт, необязателен. Будут доступны все темы для админ-панели
     "SITE_TITLE": "Название вашего проекта",  # Заголовок в браузере
     "SITE_HEADER": "Админ-панель",           # Заголовок в шапке
-    "THEME": "dark",  # "light", "dark" или "auto" (автоопределение)
+    "THEME": "dark",
 }
+
+MEDIA_URL = '/media/'  # URL для доступа к медиа
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Папка на сервере

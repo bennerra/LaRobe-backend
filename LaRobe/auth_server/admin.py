@@ -32,7 +32,6 @@ class CustomUserAdmin(BaseUserAdmin, ModelAdmin):
         "role",
         "is_active",
         "sex",
-        "date_of_birth",
         "date_joined",
     ]
 
@@ -64,7 +63,6 @@ class CustomUserAdmin(BaseUserAdmin, ModelAdmin):
                 "email",
                 "phone",
                 "sex",
-                "date_of_birth",
                 "about_me",
             )
         }),
